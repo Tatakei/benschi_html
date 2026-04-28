@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorted Product Gallery</title>
+    <style>
+        body { background-color: #121212; display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 50px; font-family: sans-serif; color: white; }
+
+        /* The Card Design */
+        .card { width: 220px; height: 320px; background: #07182E; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; border-radius: 20px; cursor: pointer; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card::before { content: ''; position: absolute; width: 120px; background-image: linear-gradient(180deg, #00b7ff, #ff30ff); height: 140%; animation: rotBGimg 3s linear infinite; }
+        .card::after { content: ''; position: absolute; background: #07182E; inset: 5px; border-radius: 15px; }
+
+        @keyframes rotBGimg { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        .content-box { z-index: 2; text-align: center; width: 90%; }
+        .product-img { width: 140px; height: 140px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; border: 1px solid #333; }
+
+        /* Modal Popup */
+        #modal { display: none; position: fixed; z-index: 999; inset: 0; background: rgba(0,0,0,0.95); overflow-y: auto; padding: 40px; }
+        .modal-content { max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+        .modal-content img { width: 100%; border-radius: 10px; border: 2px solid #00b7ff; }
+        .close-btn { position: fixed; top: 20px; right: 30px; font-size: 40px; color: white; cursor: pointer; z-index: 1000; }
+    </style>
+</head>
+<body>
+
+{% for product in products %}
+<div class="card" data-images="{{ product.all_images }}" onclick="showPopup(this)">
+    <div class="content-box">
+        <img src="{{ product.thumbnail }}" class="product-img">
+        <h3>{{ product.title }}</h3>
+        <p style="color: #00b7ff; font-weight: bold;">CHF {{ "%.2f"|format(product.price) }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<div id="modal">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <div class="modal-content" id="modal-images"></div>
+</div>
+
+<script>
+    function showPopup(cardElement) {
+        const modal = document.getElementById('modal');
+        const container = document.getElementById('modal-images');
+
+        // Get the images string and split it back into an array
+        const imagesString = cardElement.getAttribute('data-images');
+        const imagesArray = imagesString.split(',');
+
+        container.innerHTML = ''; // Clear previous images
+
+        imagesArray.forEach(src => {
+            if(src.trim() !== "") {
+                const img = document.createElement('img');
+                img.src = src;
+                container.appendChild(img);
+            }
+        });
+
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden"; // Disable background scroll
+    }
+
+    function closePopup() {
+        document.getElementById('modal').style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+
+    // Close when clicking outside the content
+    window.onclick = function(e) {
+        if (e.target == document.getElementById('modal')) closePopup();
+    }
+</script>
+</body>
+</html>

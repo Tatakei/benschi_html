@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benschi</title>
+    <link href="/static/css/webDashboard.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/images/benschi.png">
+</head>
+<body id="top">
+<!-- Enhanced Background Elements -->
+<div class="cyber-bg">
+    <div class="cyber-gradient"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+</div>
+
+<div class="particles" id="particlesContainer"></div>
+
+<div class="data-streams" id="dataStreams"></div>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+
+<div class="grid-overlay">
+    <div class="grid-lines"></div>
+    <div class="grid-glow"></div>
+</div>
+
+<div class="scanlines"></div>
+<div class="noise-overlay"></div>
+
+<!-- Navigation -->
+<nav>
+    <div class="nav-container">
+        <a href="/" class="logo">Benschi</a>
+        <ul class="nav-links">
+            <li><a href="/inf_atm">ATM10</a></li>
+            <li><a href="/inf_todo">Todo</a></li>
+            <li><a href="/inf_coding">Coding</a></li>
+        </ul>
+        <div class="nav-bottom">
+            <a href="/inf_calendar" class="cyber-button">Kalendar</a>
+        </div>
+        <button class="mobile-menu-button" id="mobileMenuBtn">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <a href="#top" class="mobile-menu-logo">Benschi</a>
+        <button class="mobile-menu-close" id="mobileMenuClose">✕</button>
+    </div>
+    <!--
+    <div class="mobile-menu-cta">
+        <a href="#" class="cyber-button">Access Terminal</a>
+    </div>
+    -->
+    <nav class="mobile-menu-nav">
+        <ul>
+            <li><a href="#atm10">ATM10</a></li>
+            <li><a href="#todo">Todo</a></li>
+            <li><a href="#stats">Stats</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <h1 class="hero-title">
+            <span class="hero-nexus">ATM</span><span class="hero-flow">10</span>
+        </h1>
+        <div class="hero-buttons">
+            <a href="/inf_atm/data/freq" class="btn-primary">Frequenzen</a>
+            <a href="/inf_atm/data/food" class="btn-primary">🍔 Futterlisti</a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Benschi :3</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/static/js/webDashboard.js"></script>
+</body>
+</html>

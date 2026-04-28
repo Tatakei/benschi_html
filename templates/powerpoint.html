@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body class="login-body">
+<div class="login-card">
+    <h2>Login-Terminal</h2>
+    {% if error %}<p style="color: #ef4444;">{{ error }}</p>{% endif %}
+    <form method="POST">
+        <input type="password" name="password" placeholder="Passwort" autofocus>
+        <button type="submit" class="btn btn-save">Entsperren</button>
+    </form>
+</div>
+</body>
+</html>
