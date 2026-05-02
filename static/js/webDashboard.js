@@ -1,11 +1,3 @@
-/*
-
-TemplateMo 594 nexus flow
-
-https://templatemo.com/tm-594-nexus-flow
-
-*/
-
 // JavaScript Document
 
 // Initialize mobile menu functionality
@@ -139,6 +131,7 @@ https://templatemo.com/tm-594-nexus-flow
         }
 
         // Generate Matrix Rain Effect
+/*
         function generateMatrixRain() {
             const matrixRain = document.getElementById('matrixRain');
             const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
@@ -200,6 +193,7 @@ https://templatemo.com/tm-594-nexus-flow
         generateMatrixRain();
         generateParticles();
         generateDataStreams();
+        */
 
         // Regenerate matrix rain on window resize
         let resizeTimer;

@@ -37,7 +37,7 @@
 <web-nav></web-nav>
 
 <!-- Hero Section -->
-<section class="hero" style="display: flex; flex-direction: column;">
+<section id="hero" class="hero" style="display: flex; flex-direction: column;">
     <div class="hero-container">
         <h1 class="hero-title">
             <span class="hero-nexus">Noti</span><span class="hero-flow">zen</span>
@@ -58,19 +58,31 @@
                         <input type="radio" id="notes-category-opt-3" name="notes-category" value="notes-category-opt-3">
                         <label for="notes-category-opt-3">Vorschlag</label>
 
+                        <!--
                         <input type="radio" id="notes-category-opt-4" name="notes-category" value="notes-category-opt-4">
                         <label for="notes-category-opt-4">Glossar</label>
+                        -->
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="content"></label>
+                    <label for="content" id="content_text">Content</label>
                     <input type="text" id="notes_content" name="content" placeholder="Content" autocomplete="off" required>
                 </div>
 
                 <div class="form-group">
+                    <laabel for="glossar_word" id="glossar_word_text">Glossar Wort</laabel>
+                    <input type="text" id="glossar_word" name="glossar_word" placeholder="Glossar Wort">
+                </div>
+
+                <div class="form-group">
+                    <laabel for="glossar_explanation" id="glossar_explanation_text">Glossar Erklärung</laabel>
+                    <input type="text" id="glossar_explanation" name="glossar_explanation" placeholder="Glossar Erklärung">
+                </div>
+
+                <div class="form-group">
                     <label for="uid">UID</label>
-                    <input type="text" id="notes_uid" name="uid" placeholder="UID" value="123" disabled>
+                    <input type="text" id="notes_uid" name="uid" placeholder="UID" value="" disabled>
                 </div>
 
                 <button type="submit" id="loginBtn" class="btn-primary btn-submit" onclick="updateDB()">Erstellen</button>

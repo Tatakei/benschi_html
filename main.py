@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template, redirect, url_for, request, make_response, flash, session
 from routes.notes_logic import notes_bp
 from routes.db_logic import databank_bp
+from routes.dimstorage_logic import dimstorage_bp
 from werkzeug.security import check_password_hash, generate_password_hash
 import helpers.sqlite3 as db
 
@@ -21,6 +22,7 @@ USERS = {
 db.Initialize()
 
 app.register_blueprint(notes_bp, url_prefix='/notes')
+app.register_blueprint(dimstorage_bp, url_prefix='/dimstorage')
 app.register_blueprint(databank_bp, url_prefix='/databank')
 
 #     return render_template('html', data=data, todos=todos, foods=foods, cat_counts=cat_counts)

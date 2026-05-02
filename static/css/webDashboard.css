@@ -29,7 +29,8 @@
             overflow-x: hidden;
         }
 
-        /* Enhanced Cyberpunk Background */
+/*
+
         .cyber-bg {
             position: fixed;
             top: 0;
@@ -41,7 +42,6 @@
             z-index: -5;
         }
 
-        /* Animated gradient background */
         .cyber-gradient {
             position: absolute;
             top: -50%;
@@ -63,7 +63,6 @@
             100% { transform: rotate(360deg) scale(1); }
         }
 
-        /* Matrix rain effect */
         .matrix-rain {
             position: absolute;
             top: 0;
@@ -107,7 +106,6 @@
             100% { transform: translateY(200vh); }
         }
 
-        /* Animated grid overlay */
         .grid-overlay {
             position: fixed;
             top: 0;
@@ -148,7 +146,6 @@
             100% { transform: translate(50px, 50px); }
         }
 
-        /* Floating particles */
         .particles {
             position: fixed;
             top: 0;
@@ -194,7 +191,6 @@
             }
         }
 
-        /* Glowing orbs */
         .orb {
             position: fixed;
             border-radius: 50%;
@@ -244,7 +240,6 @@
             }
         }
 
-        /* Scanlines effect */
         .scanlines {
             position: fixed;
             top: 0;
@@ -282,7 +277,6 @@
             pointer-events: none;
         }
 
-        /* Noise texture overlay */
         .noise-overlay {
             position: fixed;
             top: 0;
@@ -301,6 +295,8 @@
             0% { transform: translateY(-100%); }
             100% { transform: translateY(100%); }
         }
+
+        */
 
         /* Navigation */
         nav {
