@@ -91,7 +91,7 @@ async function deleteEntry(table_name, id, elementToRemove) {
 }
 
 const uiImages = {
-    "123": "/static/images/benschi.png"
+    "1192020514603": "/static/images/tatakei.png"
 };
 
 async function fetchDB(table_name, block, type) {
@@ -211,18 +211,6 @@ async function fetchDB(table_name, block, type) {
 
                 container.appendChild(wrapper);
             });
-            /*
-
-                const delBtn = wrapper.querySelector('.delete-btn');
-
-                delBtn.addEventListener('click', () => {
-                    deleteEntry(table_name, item.id, wrapper);
-                });
-
-                info_container.appendChild(wrapper);
-            });
-
-            */
         } else {
             alert("HTTP ERROR: " + response.status);
         }

@@ -387,8 +387,10 @@
         });
 
         // Random cyber text effects
+/*
         const cyberTexts = ['Benschi :3', 'API CONNECTED', '404 NOT FOUND', 'SHORK :3'];
-
+ */
+        const cyberTexts = [''];
         setInterval(() => {
             const randomText = cyberTexts[Math.floor(Math.random() * cyberTexts.length)];
             const tempElement = document.createElement('div');
